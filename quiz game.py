@@ -24,8 +24,8 @@ def view_questions():
     if questions:
         print("Quiz Questions List:")
         for index, question in enumerate(questions, 1):
-            print(f"   Question: {[0]}")
-            print(f"   Answer: {[1]}")
+            print(f"{index}. Question: {question[0]}")
+            print(f"   Answer: {question[1]}")
     else:
         print("No questions available.")
 
@@ -118,7 +118,7 @@ def main():
         choice = input("Enter your choice (1-6): ")
 
         if choice == '1':
-            play_quiz()
+            play_quiz() 
         elif choice == '2':
             add_question()
         elif choice == '3':
@@ -133,4 +133,5 @@ def main():
         else:
             print("Invalid choice. Please enter a number between 1 and 6.")
 
-main()
+if __name__ == "__main__":
+    main()
